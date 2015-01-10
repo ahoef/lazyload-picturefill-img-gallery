@@ -1,2 +1,4 @@
 # lazyload-picturefill-img-gallery
-demo of lazyloading responsive images with unveil.js + picturefill.js
+an image gallery that uses the html5 picture element and unveil.js to lazyload device-appropriate images. This example is set up to serve mobile, desktop, or desktop retina images, and uses picturefill.js for cross browser compatibility. 
+
+View demo: (http://www.ahoef.co/img-gallery)
