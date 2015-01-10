@@ -1,0 +1,87 @@
+
+@font-face {
+  font-family: Milano;
+  src: url("../fonts/Milano_regular.ttf");
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  color: #444;
+}
+
+h1 {
+  font-family: Milano;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+p {
+  font-family: 'Helvetica', sans-serif;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+i {
+  font-size: 30px !important;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+  border-bottom: 1px solid #444;
+}
+
+a:hover {
+  color: #91E2AD;
+  border-bottom: 1px solid #91E2AD;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  text-align: center;
+  padding-top: 12px;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.picture {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  
+}
+
+@media only screen and (min-width: 64.063em) {
+  header {
+    max-width: 70%;
+    padding-top: 50px;
+  }
+  h1 {
+    font-size: 34px;
+  }
+  p {
+    line-height: 24px;
+    font-size: 16px;
+  }
+  i:before {
+    font-size: 50px !important;
+  }
+  .picture {
+    max-width: 80%;
+    margin-bottom: 60px;
+  }
+
+}

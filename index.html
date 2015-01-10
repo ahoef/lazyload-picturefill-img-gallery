@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+    <title>Lazyloading Picturefill Image Gallery</title>
+    <meta name="description" content="" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.2.0/picturefill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/unveil/1.3.0/jquery.unveil.min.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+
+    <link rel="icon" type="image/png" href="http://i.imgur.com/bsI3IOt.png">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <header>
+      <h1>lazyloading responsive image gallery</h1>
+      <p>Here's a demo of an image gallery that uses the html5 picture element and unveil.js to lazyload device-appropriate images. This example is set up to serve mobile, desktop, or desktop retina images, and uses picturefill.js for cross browser compatibility.</p>
+    </header>
+
+    <section>
+
+    <!-- first four images are not lazy-loaded -->
+    <div class="picture picture1">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="images/desktop-1400px/sheep.jpg, 
+              images/retina-2800px/sheep.jpg 2x" media="(min-width: 641px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="images/mobile-640px/sheep.jpg">
+          </picture>
+      </div>
+
+      <div class="picture picture2">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="images/desktop-1400px/bear.jpg, 
+              images/retina-2800px/bear.jpg 2x" media="(min-width: 641px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="images/mobile-640px/bear.jpg">
+          </picture>
+      </div>
+
+      <div class="picture picture3">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="images/desktop-1400px/cow.jpg, 
+              images/retina-2800px/cow.jpg 2x" media="(min-width: 641px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="images/mobile-640px/cow.jpg">
+          </picture>
+      </div>
+
+      <div class="picture picture4">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="images/desktop-1400px/elk.jpg, 
+              images/retina-2800px/elk.jpg 2x" media="(min-width: 641px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="images/mobile-640px/elk.jpg">
+          </picture>
+      </div>
+
+      <!-- lazy-loading starts here -->
+
+      <div class="picture picture5">
+          <img src="images/placeholder.gif" 
+            class="img-lazyload"
+            data-mobile="images/mobile-640px/camel.jpg"
+            data-desktop="images/desktop-1400px/camel.jpg"
+            data-retina="images/retina-2800px/camel.jpg" />
+      </div>
+
+      <div class="picture picture6">
+          <img src="images/placeholder.gif" 
+            class="img-lazyload"
+            data-mobile="images/mobile-640px/prairie-dogs.jpg"
+            data-desktop="images/desktop-1400px/prairie-dogs.jpg"
+            data-retina="images/retina-2800px/prairie-dogs.jpg" />
+      </div>
+
+      <div class="picture picture7">
+          <img src="images/placeholder.gif" 
+            class="img-lazyload"
+            data-mobile="images/mobile-640px/fox.jpg"
+            data-desktop="images/desktop-1400px/fox.jpg"
+            data-retina="images/retina-2800px/fox.jpg" />
+      </div>
+
+      <div class="picture picture8">
+          <img src="images/placeholder.gif" 
+            class="img-lazyload"
+            data-mobile="images/mobile-640px/ostrich.jpg"
+            data-desktop="images/desktop-1400px/ostrich.jpg"
+            data-retina="images/retina-2800px/ostrich.jpg" />
+      </div>
+
+      <div class="picture picture9">
+          <img src="images/placeholder.gif" 
+            class="img-lazyload"
+            data-mobile="images/mobile-640px/horses.jpg"
+            data-desktop="images/desktop-1400px/horses.jpg"
+            data-retina="images/retina-2800px/horses.jpg" />
+      </div>
+
+      <div class="picture picture10" >
+          <img src="images/placeholder.gif" 
+            class="img-lazyload"
+            data-mobile="images/mobile-640px/ducks.jpg"
+            data-desktop="images/desktop-1400px/ducks.jpg"
+            data-retina="images/retina-2800px/ducks.jpg" />
+      </div>
+
+      <div class="picture picture11" >
+          <img src="images/placeholder.gif" 
+            class="img-lazyload"
+            data-mobile="images/mobile-640px/cat.jpg"
+            data-desktop="images/desktop-1400px/cat.jpg"
+            data-retina="images/retina-2800px/cat.jpg" />
+      </div>
+
+      <div class="picture picture12" >
+          <img src="images/placeholder.gif" 
+            class="img-lazyload"
+            data-mobile="images/mobile-640px/pelicans.jpg"
+            data-desktop="images/desktop-1400px/pelicans.jpg"
+            data-retina="images/retina-2800px/pelicans.jpg" />
+      </div>
+    </section>
+
+    <footer>
+      <i class="fa fa-angellist"></i> 
+      <p>Made by <a href="http://www.ahoef.co" target="_blank">Alexandra Hoefinger</a></p>
+    </footer>
+    
+  </body>
+</html>
