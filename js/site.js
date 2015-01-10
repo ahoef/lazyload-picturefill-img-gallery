@@ -3,8 +3,9 @@ jQuery(function($) {
 
     	var isMobile = screen.width <= 640,
 	    	isRetina = window.devicePixelRatio > 1;
+	    	$imgLazyload = $('.img-lazyload');
 
-        $('.img-lazyload').each(function() {
+        $imgLazyload.each(function() {
 
 	      	var $this = $(this);
 	      		desktopImgSrc = $this.attr('data-desktop'),
@@ -17,6 +18,12 @@ jQuery(function($) {
 	      	$this.attr('data-src', dataSrc);
 
         });
-        $('.img-lazyload').unveil(200);
+
+        $imgLazyload.unveil(200, function() {
+		  $(this).load(function() {
+		    this.style.opacity = 1;
+		  });
+		});
+		
     });
 });
