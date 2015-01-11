@@ -4,9 +4,10 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
 
     <title>Lazyloading Picturefill Image Gallery</title>
-    <meta name="description" content="" />
+    <meta name="description" content="An image gallery that uses the html5 picture element and unveil.js to lazyload device-appropriate responsive images" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.2.0/picturefill.min.js"></script>
@@ -27,7 +28,7 @@
 
     <section>
 
-    <!-- first four images are not lazy-loaded -->
+    <!-- first three images are not lazy-loaded -->
     <div class="picture picture1">
           <picture>
             <!--[if IE 9]><video style="display: none;"><![endif]-->
@@ -58,17 +59,15 @@
           </picture>
       </div>
 
-      <div class="picture picture4">
-          <picture>
-            <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="images/desktop-1400px/elk.jpg, 
-              images/retina-2800px/elk.jpg 2x" media="(min-width: 641px)">
-            <!--[if IE 9]></video><![endif]-->
-            <img srcset="images/mobile-640px/elk.jpg">
-          </picture>
-      </div>
-
       <!-- lazy-loading starts here -->
+
+      <div class="picture picture4">
+          <img src="images/placeholder.gif" 
+            class="img-lazyload"
+            data-mobile="images/mobile-640px/elk.jpg"
+            data-desktop="images/desktop-1400px/elk.jpg"
+            data-retina="images/retina-2800px/elk.jpg" />
+      </div>
 
       <div class="picture picture5">
           <img src="images/placeholder.gif" 
@@ -139,6 +138,6 @@
       <i class="fa fa-angellist"></i> 
       <p>Made by <a href="http://www.ahoef.co" target="_blank">Alexandra Hoefinger</a></p>
     </footer>
-    
+
   </body>
 </html>
