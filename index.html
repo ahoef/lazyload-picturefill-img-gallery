@@ -4,10 +4,10 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+    <meta name="description" content="An example of a lazyloading responsive image gallery that uses the HTML5 picture tag">
 
     <title>Lazyloading Picturefill Image Gallery</title>
-    <meta name="description" content="An image gallery that uses the html5 picture element and unveil.js to lazyload device-appropriate responsive images" />
+    <meta name="description" content="An image gallery that uses the HTML5 picture element and unveil.js to lazyload device-appropriate responsive images" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.2.0/picturefill.min.js"></script>
@@ -29,84 +29,90 @@
     <section>
 
     <!-- first three images are not lazy-loaded -->
-    <div class="picture picture1">
-          <picture>
-            <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="images/desktop-1400px/sheep.jpg, 
-              images/retina-2800px/sheep.jpg 2x" media="(min-width: 641px)">
-            <!--[if IE 9]></video><![endif]-->
-            <img srcset="images/mobile-640px/sheep.jpg">
-          </picture>
+      <div class="picture picture1">
+        <picture>
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source srcset="images/desktop-1400px/sheep.jpg, 
+            images/retina-2800px/sheep.jpg 2x" media="(min-width: 641px)" alt="Photo of a sheep">
+          <!--[if IE 9]></video><![endif]-->
+          <img srcset="images/mobile-640px/sheep.jpg">
+        </picture>
       </div>
 
       <div class="picture picture2">
-          <picture>
-            <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="images/desktop-1400px/bear.jpg, 
-              images/retina-2800px/bear.jpg 2x" media="(min-width: 641px)">
-            <!--[if IE 9]></video><![endif]-->
-            <img srcset="images/mobile-640px/bear.jpg">
-          </picture>
+        <picture>
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source srcset="images/desktop-1400px/bear.jpg, 
+            images/retina-2800px/bear.jpg 2x" media="(min-width: 641px)" alt="Photo of a bear">
+          <!--[if IE 9]></video><![endif]-->
+          <img srcset="images/mobile-640px/bear.jpg">
+        </picture>
       </div>
 
       <div class="picture picture3">
-          <picture>
-            <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="images/desktop-1400px/cow.jpg, 
-              images/retina-2800px/cow.jpg 2x" media="(min-width: 641px)">
-            <!--[if IE 9]></video><![endif]-->
-            <img srcset="images/mobile-640px/cow.jpg">
-          </picture>
+        <picture>
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source srcset="images/desktop-1400px/cow.jpg, 
+            images/retina-2800px/cow.jpg 2x" media="(min-width: 641px)" alt="Photo of a cow">
+          <!--[if IE 9]></video><![endif]-->
+          <img srcset="images/mobile-640px/cow.jpg">
+        </picture>
       </div>
 
       <!-- lazy-loading starts here -->
 
       <div class="picture picture4">
-          <img src="images/placeholder.gif" 
-            class="img-lazyload"
-            data-mobile="images/mobile-640px/elk.jpg"
-            data-desktop="images/desktop-1400px/elk.jpg"
-            data-retina="images/retina-2800px/elk.jpg" />
+        <img src="images/placeholder.gif" 
+          class="img-lazyload"
+          data-mobile="images/mobile-640px/elk.jpg"
+          data-desktop="images/desktop-1400px/elk.jpg"
+          data-retina="images/retina-2800px/elk.jpg"
+          alt="Photo of an elk" />
       </div>
 
       <div class="picture picture5">
-          <img src="images/placeholder.gif" 
-            class="img-lazyload"
-            data-mobile="images/mobile-640px/camel.jpg"
-            data-desktop="images/desktop-1400px/camel.jpg"
-            data-retina="images/retina-2800px/camel.jpg" />
+        <img src="images/placeholder.gif" 
+          class="img-lazyload"
+          data-mobile="images/mobile-640px/camel.jpg"
+          data-desktop="images/desktop-1400px/camel.jpg"
+          data-retina="images/retina-2800px/camel.jpg" 
+          alt="Photo of a camel" />
       </div>
 
       <div class="picture picture6">
-          <img src="images/placeholder.gif" 
-            class="img-lazyload"
-            data-mobile="images/mobile-640px/prairie-dogs.jpg"
-            data-desktop="images/desktop-1400px/prairie-dogs.jpg"
-            data-retina="images/retina-2800px/prairie-dogs.jpg" />
+        <img src="images/placeholder.gif" 
+          class="img-lazyload"
+          data-mobile="images/mobile-640px/prairie-dogs.jpg"
+          data-desktop="images/desktop-1400px/prairie-dogs.jpg"
+          data-retina="images/retina-2800px/prairie-dogs.jpg" 
+          alt="Photo of a praire dog" />
       </div>
 
       <div class="picture picture7">
-          <img src="images/placeholder.gif" 
-            class="img-lazyload"
-            data-mobile="images/mobile-640px/fox.jpg"
-            data-desktop="images/desktop-1400px/fox.jpg"
-            data-retina="images/retina-2800px/fox.jpg" />
+        <img src="images/placeholder.gif" 
+          class="img-lazyload"
+          data-mobile="images/mobile-640px/fox.jpg"
+          data-desktop="images/desktop-1400px/fox.jpg"
+          data-retina="images/retina-2800px/fox.jpg" 
+          alt="Photo of a fox" />
       </div>
 
       <div class="picture picture8">
-          <img src="images/placeholder.gif" 
-            class="img-lazyload"
-            data-mobile="images/mobile-640px/horses.jpg"
-            data-desktop="images/desktop-1400px/horses.jpg"
-            data-retina="images/retina-2800px/horses.jpg" />
+        <img src="images/placeholder.gif" 
+          class="img-lazyload"
+          data-mobile="images/mobile-640px/horses.jpg"
+          data-desktop="images/desktop-1400px/horses.jpg"
+          data-retina="images/retina-2800px/horses.jpg" 
+          alt="Photo of horses" />
       </div>
 
       <div class="picture picture9" >
-          <img src="images/placeholder.gif" 
-            class="img-lazyload"
-            data-mobile="images/mobile-640px/cat.jpg"
-            data-desktop="images/desktop-1400px/cat.jpg"
-            data-retina="images/retina-2800px/cat.jpg" />
+        <img src="images/placeholder.gif" 
+          class="img-lazyload"
+          data-mobile="images/mobile-640px/cat.jpg"
+          data-desktop="images/desktop-1400px/cat.jpg"
+          data-retina="images/retina-2800px/cat.jpg" 
+          alt="Photo of a cat" />
       </div>
 
     </section>
